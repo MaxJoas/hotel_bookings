@@ -19,8 +19,9 @@
 
 # this is mainly done already, still need to make some nice plots etc
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
-
+labelencoder = LabelEncoder()
 df = pd.read_csv('../../data/hotel_bookings.csv')
 df.head()
 df.shape
@@ -53,6 +54,7 @@ df['country'].fillna('no_country', inplace=True)
 # check how many unique categorial values are in each non-numerical column
 cat_cols = df.dtypes[df.dtypes == 'object']
 cat_cols.index[0]
+cat_cols
 for col in cat_cols.index:
     print(col)
     print(df[col].nunique())
@@ -67,7 +69,25 @@ d = {k: v for k, v in zip(keys_list, value_list)}
 df['arrival_date_month'] = df['arrival_date_month'].map(d)
 
 df['reservation_status_date'].dtype
-# TODO get dummies for remaining categorial variables excep reservation_status_date
+
+
+# encoding country as lable
+df['country'] = labelencoder.fit_transform(df['country'])
+df.country
+for col in cat_cols.index:
+    print(col)
+    if col == 'reservation_status_date' or col == 'country':
+        print('continue')
+        continue
+    try:
+        df = pd.concat([df.drop(columns=col), pd.get_dummies(df[col])], axis=1)
+    except:
+        df
+
+df.shape
+pd.get_dummies(df['customer_type'])
+df.dtypes[df.dtypes == 'object']
+# TODO reservation_status_date encoe? drop?
 # 3 decide how to deal with categorila variables and handle them accordingly
 # 4 potentially aggreagte the arrival date
 
