@@ -19,10 +19,10 @@ The following libraries have been used:
 *  Seaborn 0.11.0 
 
 ### File Structure
-*  analyse_hotel_bookings.ipynb file: Main Notebook, contains code for the analysis and documentation
-*  plotting_func.py: contains two functions for visualization
-*  <mark>random_parameters.py </mark> contains the parameters for the Random Forest hyperparameter tuning
-*  hotel_bookings.csv: data file
+*  `analyse_hotel_bookings.ipynb:` Main Notebook, contains code for the analysis and documentation
+*  `plotting_func.py:` contains two functions for visualization
+*  `random_parameters.py:` contains the parameters for the Random Forest hyperparameter tuning
+*  `hotel_bookings.csv:` data file
 
 ### Medium Article
 I summarized the results for a non-technical audience in a medium article.
