@@ -5,7 +5,7 @@ The objective was to find a dataset and use data Science to give relevant busine
 The analyse aims to answer the following questions:
 1. Can we predict whether a customer will cancel his reservation?
 2. Which factors are the most important to predict whether a customer will cancel his reservation?
-2.1 How do these factors correlate with cancellation?
+  2.1 How do these factors correlate with cancellation?
 3. Which distribution channels are used by regular customers?
 
 ## File Structure
