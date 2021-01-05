@@ -12,3 +12,7 @@ The analyse aims to answer the following questions:
 I chose a dataset from Kaggle on Hotel Bookings. The dataset can be found in the data direcotry of this project.
 I documented the coding process and results in the analyse_hotel_bookings.ipynb file. Plot creation was extracted to 
 plotting_func.py. The tuning parametes for the Random Forest are stored in random_parameters.py
+
+## Medium Article
+I summarized the results for a non-technical audience in a medium article.
+https://maximilian-joas.medium.com/how-data-science-can-make-hotels-more-profitable-b3af54eca590
